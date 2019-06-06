@@ -1,5 +1,7 @@
 FROM python:3.4-slim
 
+MAINTAINER ZhaoYong
+
 RUN apt-get update && apt-get install -y \
 		gcc \
 		gettext \
