@@ -2,10 +2,10 @@ FROM python:3.5-slim
 
 MAINTAINER ZhaoYong
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        mysql-client \
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update \
+#     && apt-get install -y --no-install-recommends \
+#         mysql-client \
+#     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/docker
 
