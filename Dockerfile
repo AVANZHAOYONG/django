@@ -1,15 +1,20 @@
-FROM python:3.4-slim
+FROM python:3.5-slim
 
 MAINTAINER ZhaoYong
 
-RUN apt-get update && apt-get install -y \
-		gcc \
-		gettext \
-		mysql-client libmysqlclient-dev \
-		postgresql-client libpq-dev \
-		sqlite3 \
-	--no-install-recommends && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /usr/src/app
+#COPY requirements.txt ./
+#RUN pip install -r requirements.txt
+#COPY . .
 
 ENV DJANGO_VERSION 2.0.3
 
-RUN pip install mysqlclient psycopg2 django=="$DJANGO_VERSION"
+RUN pip install mysqlclient paramiko configparser psycopg2 django=="$DJANGO_VERSION"
+
+EXPOSE 8000
+CMD ["python", "manage.py","--noreload" ,"runserver", "0.0.0.0:8000"]
