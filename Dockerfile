@@ -7,10 +7,7 @@ RUN apt-get update \
         mysql-client \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /usr/src/app
-#COPY requirements.txt ./
-#RUN pip install -r requirements.txt
-#COPY . .
+WORKDIR /home/docker
 
 ENV DJANGO_VERSION 2.0.3
 
