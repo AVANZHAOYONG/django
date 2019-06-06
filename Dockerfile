@@ -14,7 +14,7 @@ WORKDIR /usr/src/app
 
 ENV DJANGO_VERSION 2.0.3
 
-RUN pip install --upgrade pip && pip install paramiko configparser pymysql django=="$DJANGO_VERSION"
+RUN pip install --upgrade pip && pip install django=="$DJANGO_VERSION" paramiko configparser pymysql requests CBC des PAD_PKCS5 
 
 EXPOSE 8000
 CMD ["python", "manage.py" ,"runserver","--noreload", "0.0.0.0:8000"]
