@@ -14,7 +14,7 @@ WORKDIR /usr/src/app
 
 ENV DJANGO_VERSION 2.0.3
 
-RUN  pip install django=="$DJANGO_VERSION" paramiko configparser pymysql requests pyDes 
+RUN  pip install django=="$DJANGO_VERSION" paramiko cryptography==2.4.2 configparser pymysql requests pyDes 
 
 EXPOSE 8000
 CMD ["python", "manage.py" ,"runserver","--noreload", "0.0.0.0:8000"]
