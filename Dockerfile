@@ -14,7 +14,7 @@ WORKDIR /usr/src/app
 
 ENV DJANGO_VERSION 2.0.3
 
-RUN pip install --upgrade pip && pip install paramiko configparser django=="$DJANGO_VERSION"
+RUN pip install --upgrade pip && pip install paramiko configparser pymysql django=="$DJANGO_VERSION"
 
 EXPOSE 8000
 CMD ["python", "manage.py","--noreload" ,"runserver", "0.0.0.0:8000"]
