@@ -117,7 +117,8 @@ RUN set -ex; \
 		"pip==$PYTHON_PIP_VERSION" \
 	; \
 	pip --version; \
-	pip install –no-cache-dir django=="$DJANGO_VERSION" paramiko cryptography==2.4.2 configparser pymysql requests pyDes ;\
+	\
+	pip install –-no-cache-dir django=="$DJANGO_VERSION" paramiko cryptography==2.4.2 configparser pymysql requests pyDes; \
 	\
 	find /usr/local -depth \
 		\( \
