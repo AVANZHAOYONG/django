@@ -6,8 +6,6 @@ RUN apt-get update && apt-get install -y \
 		gcc \
 		gettext \
 		mysql-client \
-		postgresql-client libpq-dev \
-		sqlite3 \
 	--no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 ENV DJANGO_VERSION 2.0.3
