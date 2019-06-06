@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 
 ENV DJANGO_VERSION 2.0.3
 
-RUN pip install mysqlclient psycopg2 django=="$DJANGO_VERSION" \
+RUN  pip install --upgrade pip && pip install mysqlclient psycopg2 django=="$DJANGO_VERSION" \
         paramiko  \
 		configparser \
 		mysql-connector-python \
