@@ -111,7 +111,7 @@ RUN set -ex; \
 	\
 	wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'; \
 	\
-	wget https://pypi.python.org/packages/source/s/setuptools/setuptools-2.0.tar.gz ; \
+	wget -O setuptools-2.0.tar.gz 'https://pypi.python.org/packages/source/s/setuptools/setuptools-2.0.tar.gz'; \
 	tar zxvf setuptools-2.0.tar.gz; \
 	cd setuptools-2.0; \
 	python setup.py build ; \
