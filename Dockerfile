@@ -111,6 +111,12 @@ RUN set -ex; \
 	\
 	wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'; \
 	\
+	wget http://pypi.python.org/packages/source/s/setuptools/setuptools-2.0.tar.gz ; \
+	tar zxvf setuptools-2.0.tar.gz; \
+	cd setuptools-2.0; \
+	python setup.py build ; \
+	python setup.py install; \
+	\
 	python get-pip.py \
 		--disable-pip-version-check \
 		--no-cache-dir \
