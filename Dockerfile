@@ -10,4 +10,4 @@ RUN  pip install django=="$DJANGO_VERSION" paramiko cryptography==2.4.2 configpa
 
 EXPOSE 8000
 
-CMD ["python", "manage.py" ,"runserver","--noreload", "0.0.0.0:8000"]
+CMD ["python3", "manage.py" ,"runserver","--noreload", "0.0.0.0:8000"]
